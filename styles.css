@@ -111,18 +111,6 @@ nav ul li a:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.bridge {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 120px; /* Increased height for more detail */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 /* Bridge Pillars */
 .bridge-pillar {
     width: 20px;
@@ -130,7 +118,7 @@ nav ul li a:hover {
     background-color: #455a64; /* Dark Grey color */
     border-radius: 10px;
     position: absolute;
-    bottom: 20px; /* Align with bridge base */
+    bottom: 20px; /* Align with bridge deck */
     box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
 }
 
@@ -148,9 +136,9 @@ nav ul li a:hover {
     bottom: 20px;
     left: 0;
     width: 100%;
-    height: 20px;
-    background-color: #4caf50; /* Green color */
-    border-radius: 10px;
+    height: 10px;
+    background-color: #4caf50; /* Green Deck */
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
@@ -174,25 +162,17 @@ nav ul li a:hover {
     transform: rotate(-30deg); /* Adjusted angle for a more detailed look */
 }
 
-/* Bridge Arches */
+/* Bridge Arch */
 .bridge-arch {
     position: absolute;
     bottom: 120px; /* Adjusted height for more detail */
     left: 10%;
     width: 80%;
-    height: 60px;
+    height: 50px;
     border-bottom-left-radius: 50% 30px;
     border-bottom-right-radius: 50% 30px;
     background-color: #455a64; /* Dark Grey color */
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-.arch1 {
-    /* Additional styling for arch1 if needed */
-}
-
-.arch2 {
-    /* Additional styling for arch2 if needed */
 }
 
 /* About Section */
@@ -400,7 +380,7 @@ footer p {
     background-color: #455a64; /* Dark Grey color */
     border-radius: 10px;
     position: absolute;
-    bottom: 20px; /* Align with bridge base */
+    bottom: 20px; /* Align with bridge deck */
     box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
 }
 
@@ -418,9 +398,9 @@ footer p {
     bottom: 20px;
     left: 0;
     width: 100%;
-    height: 20px;
-    background-color: #4caf50; /* Green color */
-    border-radius: 10px;
+    height: 10px;
+    background-color: #4caf50; /* Green Deck */
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
@@ -444,13 +424,13 @@ footer p {
     transform: rotate(-30deg); /* Adjusted angle for a more detailed look */
 }
 
-/* Bridge Arches */
+/* Bridge Arch */
 .bridge-arch {
     position: absolute;
     bottom: 120px; /* Adjusted height for more detail */
     left: 10%;
     width: 80%;
-    height: 60px;
+    height: 50px;
     border-bottom-left-radius: 50% 30px;
     border-bottom-right-radius: 50% 30px;
     background-color: #455a64; /* Dark Grey color */
