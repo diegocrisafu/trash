@@ -1,0 +1,201 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial, sans-serif';
+    background: linear-gradient(to top, #87cefa, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4682b4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bridge-container {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+/* Bridge Design */
+.bridge-container::before, .bridge-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 150px;
+    background: linear-gradient(to top, #2f4f4f, transparent);
+    border-radius: 50%;
+}
+
+.bridge-container::before {
+    left: 0;
+}
+
+.bridge-container::after {
+    right: 0;
+}
+
+.bridge {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background-color: #696969;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: sway 6s infinite ease-in-out;
+}
+
+.bridge::before, .bridge::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+    background-color: #696969;
+    border-radius: 50%;
+}
+
+.bridge::before {
+    left: -10px;
+}
+
+.bridge::after {
+    right: -10px;
+}
+
+/* Sway Animation */
+@keyframes sway {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(1deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(70, 130, 180, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #4682b4;
+    font-size: 2em;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Bridge Design */
+.bridge-container::before, .bridge-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 150px;
+    background: radial-gradient(circle at top, #2f4f4f, transparent);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.bridge-container::before {
+    left: 0;
+}
+
+.bridge-container::after {
+    right: 0;
+}
+
+.bridge {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: linear-gradient(to right, #696969, #778899);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: sway 6s infinite ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.bridge::before, .bridge::after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    width: 20px;
+    height: 25px;
+    background-color: #696969;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.bridge::before {
+    left: -10px;
+}
+
+.bridge::after {
+    right: -10px;
+}
+
+/* Adding Support Lines */
+.bridge::after::before, .bridge::before::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: #696969;
+    top: 0;
+}
+
+.bridge::before::after {
+    left: 10px;
+}
+
+.bridge::after::before {
+    right: 10px;
+}
+
