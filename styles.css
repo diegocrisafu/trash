@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #ffefd5, #ffffff); /* Warmer gradient */
+    background: linear-gradient(to top, #ffefd5, #ffffff); /* Warm gradient */
     color: #333;
     display: flex;
     flex-direction: column;
@@ -100,9 +100,8 @@ nav ul li a:hover {
     height: 300px;
     position: relative;
     overflow: hidden;
-    background-image: url('images/bridge.jpg'); /* Your bridge image */
-    background-size: cover;
-    background-position: center;
+    /* Removed background-image */
+    background: linear-gradient(to top, #a8edea, #fed6e3); /* Soft gradient background */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -111,6 +110,76 @@ nav ul li a:hover {
 .bridge-container:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.bridge {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bridge Base */
+.bridge-base {
+    width: 100%;
+    height: 20px;
+    background-color: #8b4513; /* SaddleBrown color for bridge base */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Bridge Pillars */
+.bridge-pillar {
+    width: 20px;
+    height: 80px;
+    background-color: #8b4513; /* Same as bridge base */
+    border-radius: 10px;
+    position: relative;
+}
+
+.bridge-pillar.left {
+    /* Positioned on the left side */
+}
+
+.bridge-pillar.right {
+    /* Positioned on the right side */
+}
+
+/* Bridge Cables */
+.bridge-cable {
+    width: 2px;
+    height: 60px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+}
+
+.bridge-cable.left {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.bridge-cable.right {
+    right: 50%;
+    transform: translateX(50%) rotate(-45deg);
+}
+
+/* Bridge Arch */
+.bridge-arch {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+    background-color: #8b4513;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 /* About Section */
@@ -306,6 +375,70 @@ footer p {
 
 .social-links a:hover img {
     filter: brightness(0) invert(0.7);
+}
+
+/* Bridge Design Styles */
+
+/* Bridge Base */
+.bridge-base {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #8b4513; /* SaddleBrown color */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Bridge Pillars */
+.bridge-pillar {
+    width: 20px;
+    height: 80px;
+    background-color: #8b4513; /* Same as bridge base */
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px; /* Align with bridge base */
+}
+
+.bridge-pillar.left {
+    left: 10%;
+}
+
+.bridge-pillar.right {
+    right: 10%;
+}
+
+/* Bridge Cables */
+.bridge-cable {
+    width: 2px;
+    height: 60px;
+    background-color: #000;
+    position: absolute;
+    bottom: 80px; /* Start from top of pillars */
+}
+
+.bridge-cable.left {
+    left: 10%;
+    transform: rotate(45deg);
+}
+
+.bridge-cable.right {
+    right: 10%;
+    transform: rotate(-45deg);
+}
+
+/* Bridge Arch */
+.bridge-arch {
+    position: absolute;
+    bottom: 100px; /* Height above the base */
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+    background-color: #8b4513;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 /* Responsive Design */
