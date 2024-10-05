@@ -85,7 +85,7 @@ nav ul li a:hover {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-/* Bridge Design Section */
+/* Bridge Image Section */
 .bridge-section {
     width: 100%;
     display: flex;
@@ -97,20 +97,24 @@ nav ul li a:hover {
 .bridge-container {
     width: 90%;
     max-width: 1000px;
-    height: 300px;
+    height: auto;
     position: relative;
     overflow: hidden;
-    background-image: url('images/bridge.jpg'); /* Your bridge image */
-    background-size: cover;
-    background-position: center;
+    background-color: #f5f5dc; /* Beige background for warmth */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.bridge-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+.bridge-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.bridge-image:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
 }
 
 /* About Section */
@@ -311,7 +315,11 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .bridge-container {
-        height: 250px;
+        width: 95%;
+    }
+
+    .bridge-image {
+        width: 100%;
     }
 
     .bridge-section {
@@ -338,7 +346,11 @@ footer p {
 
 @media (max-width: 480px) {
     .bridge-container {
-        height: 200px;
+        width: 100%;
+    }
+
+    .bridge-image {
+        width: 100%;
     }
 
     .hero-content h2 {
