@@ -6,191 +6,110 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #e0f7fa, #ffffff); /* Soft blue gradient */
+    font-family: 'Arial, sans-serif';
+    background: linear-gradient(to top, #87cefa, #ffffff);
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #607d8b; /* Blue Grey color */
+    background-color: #4682b4;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #4caf50; /* Green color on hover */
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7); /* Blue gradient */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    color: white;
-    text-align: center;
+main {
+    flex: 1;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-    border-radius: 10px;
-    max-width: 800px;
-}
-
-.hero-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-.hero-content p {
-    font-size: 1.5em;
-    line-height: 1.6;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-/* Bridge Design Section */
-.bridge-section {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 .bridge-container {
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 800px;
     height: 300px;
     position: relative;
+    margin-bottom: 40px;
     overflow: hidden;
-    background: linear-gradient(to top, #cfd8dc, #eceff1); /* Light Grey gradient */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.bridge-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-/* Bridge Pillars */
-.bridge-pillar {
-    width: 20px;
-    height: 100px; /* Increased height for more detail */
-    background-color: #455a64; /* Dark Grey color */
-    border-radius: 10px;
+/* Bridge Design */
+.bridge-container::before, .bridge-container::after {
+    content: '';
     position: absolute;
-    bottom: 20px; /* Align with bridge deck */
-    box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
+    bottom: 0;
+    width: 50%;
+    height: 150px;
+    background: linear-gradient(to top, #2f4f4f, transparent);
+    border-radius: 50%;
 }
 
-.bridge-pillar.left {
-    left: 10%;
-}
-
-.bridge-pillar.right {
-    right: 10%;
-}
-
-/* Bridge Deck */
-.bridge-deck {
-    position: absolute;
-    bottom: 20px;
+.bridge-container::before {
     left: 0;
-    width: 100%;
-    height: 10px;
-    background-color: #4caf50; /* Green Deck */
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* Bridge Cables */
-.bridge-cable {
-    width: 2px;
-    height: 80px; /* Increased height for more detail */
-    background-color: #607d8b; /* Blue Grey color */
+.bridge-container::after {
+    right: 0;
+}
+
+.bridge {
     position: absolute;
-    bottom: 100px; /* Start from top of pillars */
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-
-.bridge-cable.left {
-    left: 10%;
-    transform: rotate(30deg); /* Adjusted angle for a more detailed look */
-}
-
-.bridge-cable.right {
-    right: 10%;
-    transform: rotate(-30deg); /* Adjusted angle for a more detailed look */
-}
-
-/* Bridge Arch */
-.bridge-arch {
-    position: absolute;
-    bottom: 120px; /* Adjusted height for more detail */
-    left: 10%;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80%;
-    height: 50px;
-    border-bottom-left-radius: 50% 30px;
-    border-bottom-right-radius: 50% 30px;
-    background-color: #455a64; /* Dark Grey color */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    height: 20px;
+    background-color: #696969;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: sway 6s infinite ease-in-out;
+}
+
+.bridge::before, .bridge::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+    background-color: #696969;
+    border-radius: 50%;
+}
+
+.bridge::before {
+    left: -10px;
+}
+
+.bridge::after {
+    right: -10px;
+}
+
+/* Sway Animation */
+@keyframes sway {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(1deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
 }
 
 /* About Section */
 .about {
     max-width: 800px;
     text-align: center;
-    padding: 40px 20px;
-    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
+    padding: 20px;
+    background-color: rgba(70, 130, 180, 0.1);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
 }
 
 .about h2 {
     margin-bottom: 20px;
-    color: #607d8b; /* Blue Grey color */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
+    color: #4682b4;
+    font-size: 2em;
 }
 
 .about p {
@@ -198,293 +117,13 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* Portfolio Section */
-.portfolio {
-    max-width: 1000px;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-}
-
-.portfolio h2 {
-    margin-bottom: 20px;
-    color: #607d8b; /* Blue Grey color */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project {
-    background-color: rgba(76,175,80, 0.05); /* Light Green tint */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.project h3 {
-    margin-bottom: 10px;
-    color: #455a64; /* Dark Grey color */
-    font-size: 1.5em;
-}
-
-.project p {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-/* Testimonials Section */
-.testimonials {
-    max-width: 800px;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-}
-
-.testimonials h2 {
-    margin-bottom: 20px;
-    color: #607d8b; /* Blue Grey color */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-}
-
-.testimonial {
-    background-color: rgba(76,175,80, 0.05); /* Light Green tint */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.testimonial p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #455a64; /* Dark Grey color */
-}
-
-.testimonial h4 {
-    color: #607d8b; /* Blue Grey color */
-    font-size: 1em;
-    font-weight: 700;
-}
-
-/* Contact Section */
-.contact {
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-    color: #607d8b; /* Blue Grey color */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact input, .contact textarea {
-    padding: 15px;
-    border: 2px solid #607d8b; /* Blue Grey border */
-    border-radius: 5px;
-    font-size: 1em;
-    transition: border-color 0.3s;
-}
-
-.contact input:focus, .contact textarea:focus {
-    border-color: #4caf50; /* Green color on focus */
-    outline: none;
-}
-
-.contact button {
-    padding: 15px;
-    border: none;
-    background-color: #4caf50; /* Green color */
-    color: white;
-    font-size: 1.1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.contact button:hover {
-    background-color: #388e3c; /* Darker Green on hover */
-    transform: translateY(-3px);
-}
-
 /* Footer */
 footer {
-    background-color: #607d8b; /* Blue Grey color */
+    background-color: #4682b4;
     color: white;
     text-align: center;
-    padding: 20px 10px;
+    padding: 10px;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
-footer p {
-    margin-bottom: 10px;
-    font-size: 1em;
-}
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-links a img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s;
-}
-
-.social-links a:hover img {
-    filter: brightness(0) invert(0.7);
-}
-
-/* Bridge Design Styles */
-
-/* Bridge Pillars */
-.bridge-pillar {
-    width: 20px;
-    height: 100px; /* Increased height for more detail */
-    background-color: #455a64; /* Dark Grey color */
-    border-radius: 10px;
-    position: absolute;
-    bottom: 20px; /* Align with bridge deck */
-    box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
-}
-
-.bridge-pillar.left {
-    left: 10%;
-}
-
-.bridge-pillar.right {
-    right: 10%;
-}
-
-/* Bridge Deck */
-.bridge-deck {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background-color: #4caf50; /* Green Deck */
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-/* Bridge Cables */
-.bridge-cable {
-    width: 2px;
-    height: 80px; /* Increased height for more detail */
-    background-color: #607d8b; /* Blue Grey color */
-    position: absolute;
-    bottom: 100px; /* Start from top of pillars */
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-
-.bridge-cable.left {
-    left: 10%;
-    transform: rotate(30deg); /* Adjusted angle for a more detailed look */
-}
-
-.bridge-cable.right {
-    right: 10%;
-    transform: rotate(-30deg); /* Adjusted angle for a more detailed look */
-}
-
-/* Bridge Arch */
-.bridge-arch {
-    position: absolute;
-    bottom: 120px; /* Adjusted height for more detail */
-    left: 10%;
-    width: 80%;
-    height: 50px;
-    border-bottom-left-radius: 50% 30px;
-    border-bottom-right-radius: 50% 30px;
-    background-color: #455a64; /* Dark Grey color */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .bridge-container {
-        height: 250px;
-    }
-
-    .bridge-section {
-        margin-bottom: 30px;
-    }
-
-    .about, .portfolio, .testimonials, .contact {
-        padding: 30px 15px;
-    }
-
-    .hero-content h2 {
-        font-size: 2em;
-    }
-
-    .hero-content p {
-        font-size: 1.2em;
-    }
-
-    .portfolio .projects {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .bridge-container {
-        height: 200px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .social-links a img {
-        width: 20px;
-        height: 20px;
-    }
-}
