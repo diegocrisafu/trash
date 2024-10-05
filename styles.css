@@ -100,143 +100,17 @@ nav ul li a:hover {
     height: 300px;
     position: relative;
     overflow: hidden;
-    background-color: #f5f5dc; /* Beige background for warmth */
+    background-image: url('images/bridge.jpg'); /* Your bridge image */
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Bridge Towers */
-.bridge-tower {
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 150px;
-    background-color: #8b4513; /* SaddleBrown color for towers */
-    border-radius: 10px;
-}
-
-.tower-left {
-    left: 25%;
-}
-
-.tower-right {
-    right: 25%;
-}
-
-/* Bridge Deck */
-.bridge-deck {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 20px;
-    background-color: #a0522d; /* Sienna color for deck */
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-/* Bridge Cables */
-.bridge-cables {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.cable {
-    position: absolute;
-    width: 2px;
-    background-color: #8b4513; /* Same as tower color */
-    border-radius: 1px;
-}
-
-/* Positioning the cables */
-.cable-1 {
-    left: 25%;
-    height: 50px;
-    top: 100px;
-}
-
-.cable-2 {
-    left: 30%;
-    height: 70px;
-    top: 80px;
-}
-
-.cable-3 {
-    left: 35%;
-    height: 90px;
-    top: 60px;
-}
-
-.cable-4 {
-    left: 40%;
-    height: 110px;
-    top: 40px;
-}
-
-.cable-5 {
-    left: 60%;
-    height: 110px;
-    top: 40px;
-}
-
-.cable-6 {
-    left: 65%;
-    height: 90px;
-    top: 60px;
-}
-
-.cable-7 {
-    left: 70%;
-    height: 70px;
-    top: 80px;
-}
-
-.cable-8 {
-    left: 75%;
-    height: 50px;
-    top: 100px;
-}
-
-/* Lamp Posts (Optional Decorative Elements) */
-.lamp {
-    position: absolute;
-    bottom: 70px;
-    width: 5px;
-    height: 50px;
-    background-color: #8b4513; /* Same as tower color */
-}
-
-.post-1 { left: 20%; }
-.post-2 { left: 40%; }
-.post-3 { left: 60%; }
-.post-4 { left: 80%; }
-
-.lamp::after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    background-color: #ffd700; /* Gold lamps */
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-}
-
-/* Sway Animation for Bridge Deck */
-@keyframes sway {
-    0% { transform: translateX(-50%) rotate(0deg); }
-    50% { transform: translateX(-50%) rotate(2deg); }
-    100% { transform: translateX(-50%) rotate(0deg); }
-}
-
-.bridge-deck {
-    animation: sway 6s infinite ease-in-out;
+.bridge-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 /* About Section */
@@ -440,16 +314,6 @@ footer p {
         height: 250px;
     }
 
-    .bridge-deck {
-        height: 25px;
-        bottom: 40px;
-    }
-
-    .bridge {
-        width: 90%;
-        height: 25px;
-    }
-
     .bridge-section {
         margin-bottom: 30px;
     }
@@ -475,25 +339,6 @@ footer p {
 @media (max-width: 480px) {
     .bridge-container {
         height: 200px;
-    }
-
-    .bridge-deck {
-        height: 20px;
-        bottom: 30px;
-    }
-
-    .bridge {
-        width: 95%;
-        height: 20px;
-    }
-
-    .bridge::before, .bridge::after {
-        width: 25px;
-        height: 30px;
-    }
-
-    .bridge::before::after, .bridge::after::before {
-        height: 80px;
     }
 
     .hero-content h2 {
