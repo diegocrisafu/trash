@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #ffefd5, #ffffff); /* Warm gradient */
+    background: linear-gradient(to top, #e0f7fa, #ffffff); /* Soft blue gradient */
     color: #333;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background-color: #ff7f50; /* Warm coral color */
+    background-color: #607d8b; /* Blue Grey color */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -47,7 +47,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* Gold color on hover */
+    color: #4caf50; /* Green color on hover */
 }
 
 /* Hero Section */
@@ -57,7 +57,7 @@ nav ul li a:hover {
     height: 60vh;
     overflow: hidden;
     margin-bottom: 40px;
-    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4); /* Warm fall-inspired gradient */
+    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7); /* Blue gradient */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,8 +100,7 @@ nav ul li a:hover {
     height: 300px;
     position: relative;
     overflow: hidden;
-    /* Removed background-image */
-    background: linear-gradient(to top, #a8edea, #fed6e3); /* Soft gradient background */
+    background: linear-gradient(to top, #cfd8dc, #eceff1); /* Light Grey gradient */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -118,7 +117,7 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    height: 100px;
+    height: 120px; /* Increased height for more detail */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,9 +125,12 @@ nav ul li a:hover {
 
 /* Bridge Base */
 .bridge-base {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 20px;
-    background-color: #8b4513; /* SaddleBrown color for bridge base */
+    background-color: #455a64; /* Dark Grey color */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
@@ -136,49 +138,52 @@ nav ul li a:hover {
 /* Bridge Pillars */
 .bridge-pillar {
     width: 20px;
-    height: 80px;
-    background-color: #8b4513; /* Same as bridge base */
+    height: 100px; /* Increased height for more detail */
+    background-color: #455a64; /* Dark Grey color */
     border-radius: 10px;
-    position: relative;
+    position: absolute;
+    bottom: 20px; /* Align with bridge base */
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
 }
 
 .bridge-pillar.left {
-    /* Positioned on the left side */
+    left: 10%;
 }
 
 .bridge-pillar.right {
-    /* Positioned on the right side */
+    right: 10%;
 }
 
 /* Bridge Cables */
 .bridge-cable {
     width: 2px;
-    height: 60px;
-    background-color: #000;
+    height: 80px; /* Increased height for more detail */
+    background-color: #607d8b; /* Blue Grey color */
     position: absolute;
-    top: 0;
+    bottom: 100px; /* Start from top of pillars */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .bridge-cable.left {
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
+    left: 10%;
+    transform: rotate(30deg); /* Adjusted angle for a more detailed look */
 }
 
 .bridge-cable.right {
-    right: 50%;
-    transform: translateX(50%) rotate(-45deg);
+    right: 10%;
+    transform: rotate(-30deg); /* Adjusted angle for a more detailed look */
 }
 
 /* Bridge Arch */
 .bridge-arch {
     position: absolute;
-    top: -30px;
-    left: 0;
-    width: 100%;
+    bottom: 100px; /* Height above the base */
+    left: 10%;
+    width: 80%;
     height: 60px;
     border-bottom-left-radius: 50% 30px;
     border-bottom-right-radius: 50% 30px;
-    background-color: #8b4513;
+    background-color: #455a64; /* Dark Grey color */
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
@@ -187,7 +192,7 @@ nav ul li a:hover {
     max-width: 800px;
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(255, 228, 181, 0.2); /* Moccasin color for warmth */
+    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 40px;
@@ -195,7 +200,7 @@ nav ul li a:hover {
 
 .about h2 {
     margin-bottom: 20px;
-    color: #ff7f50; /* Coral color */
+    color: #607d8b; /* Blue Grey color */
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
 }
@@ -210,7 +215,7 @@ nav ul li a:hover {
     max-width: 1000px;
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(255, 228, 181, 0.2); /* Moccasin color for warmth */
+    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 40px;
@@ -218,7 +223,7 @@ nav ul li a:hover {
 
 .portfolio h2 {
     margin-bottom: 20px;
-    color: #ff7f50; /* Coral color */
+    color: #607d8b; /* Blue Grey color */
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
 }
@@ -231,7 +236,7 @@ nav ul li a:hover {
 }
 
 .project {
-    background-color: rgba(255, 228, 181, 0.05);
+    background-color: rgba(76,175,80, 0.05); /* Light Green tint */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -246,7 +251,7 @@ nav ul li a:hover {
 
 .project h3 {
     margin-bottom: 10px;
-    color: #ff7f50; /* Coral color */
+    color: #455a64; /* Dark Grey color */
     font-size: 1.5em;
 }
 
@@ -260,7 +265,7 @@ nav ul li a:hover {
     max-width: 800px;
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(255, 228, 181, 0.2); /* Moccasin color for warmth */
+    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 40px;
@@ -268,13 +273,13 @@ nav ul li a:hover {
 
 .testimonials h2 {
     margin-bottom: 20px;
-    color: #ff7f50; /* Coral color */
+    color: #607d8b; /* Blue Grey color */
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
 }
 
 .testimonial {
-    background-color: rgba(255, 228, 181, 0.05);
+    background-color: rgba(76,175,80, 0.05); /* Light Green tint */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -285,10 +290,11 @@ nav ul li a:hover {
 .testimonial p {
     font-size: 1em;
     line-height: 1.5;
+    color: #455a64; /* Dark Grey color */
 }
 
 .testimonial h4 {
-    color: #ff7f50; /* Coral color */
+    color: #607d8b; /* Blue Grey color */
     font-size: 1em;
     font-weight: 700;
 }
@@ -299,14 +305,14 @@ nav ul li a:hover {
     margin: 0 auto 40px auto;
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(255, 228, 181, 0.2); /* Moccasin color for warmth */
+    background-color: rgba(76,175,80, 0.1); /* Light Green tint for warmth */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .contact h2 {
     margin-bottom: 20px;
-    color: #ff7f50; /* Coral color */
+    color: #607d8b; /* Blue Grey color */
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
 }
@@ -319,21 +325,21 @@ nav ul li a:hover {
 
 .contact input, .contact textarea {
     padding: 15px;
-    border: 2px solid #ff7f50; /* Coral border */
+    border: 2px solid #607d8b; /* Blue Grey border */
     border-radius: 5px;
     font-size: 1em;
     transition: border-color 0.3s;
 }
 
 .contact input:focus, .contact textarea:focus {
-    border-color: #ff6347; /* Tomato color on focus */
+    border-color: #4caf50; /* Green color on focus */
     outline: none;
 }
 
 .contact button {
     padding: 15px;
     border: none;
-    background-color: #ff7f50; /* Coral color */
+    background-color: #4caf50; /* Green color */
     color: white;
     font-size: 1.1em;
     border-radius: 5px;
@@ -342,13 +348,13 @@ nav ul li a:hover {
 }
 
 .contact button:hover {
-    background-color: #ff6347; /* Tomato color on hover */
+    background-color: #388e3c; /* Darker Green on hover */
     transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
-    background-color: #ff7f50; /* Coral color */
+    background-color: #607d8b; /* Blue Grey color */
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -386,7 +392,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 20px;
-    background-color: #8b4513; /* SaddleBrown color */
+    background-color: #455a64; /* Dark Grey color */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
@@ -394,11 +400,12 @@ footer p {
 /* Bridge Pillars */
 .bridge-pillar {
     width: 20px;
-    height: 80px;
-    background-color: #8b4513; /* Same as bridge base */
+    height: 100px; /* Increased height for more detail */
+    background-color: #455a64; /* Dark Grey color */
     border-radius: 10px;
     position: absolute;
     bottom: 20px; /* Align with bridge base */
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
 }
 
 .bridge-pillar.left {
@@ -412,32 +419,33 @@ footer p {
 /* Bridge Cables */
 .bridge-cable {
     width: 2px;
-    height: 60px;
-    background-color: #000;
+    height: 80px; /* Increased height for more detail */
+    background-color: #607d8b; /* Blue Grey color */
     position: absolute;
-    bottom: 80px; /* Start from top of pillars */
+    bottom: 100px; /* Start from top of pillars */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .bridge-cable.left {
     left: 10%;
-    transform: rotate(45deg);
+    transform: rotate(30deg); /* Adjusted angle for a more detailed look */
 }
 
 .bridge-cable.right {
     right: 10%;
-    transform: rotate(-45deg);
+    transform: rotate(-30deg); /* Adjusted angle for a more detailed look */
 }
 
 /* Bridge Arch */
 .bridge-arch {
     position: absolute;
-    bottom: 100px; /* Height above the base */
+    bottom: 120px; /* Adjusted height for more detail */
     left: 10%;
     width: 80%;
     height: 60px;
     border-bottom-left-radius: 50% 30px;
     border-bottom-right-radius: 50% 30px;
-    background-color: #8b4513;
+    background-color: #455a64; /* Dark Grey color */
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
