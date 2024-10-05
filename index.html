@@ -6,25 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridges of Connection</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Enhanced Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Bridges of Connection</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main>
-        <div class="bridge-container">
-            <div class="bridge"></div>
-        </div>
+        <!-- Hero Section with Background Video -->
+        <section class="hero">
+            <video autoplay muted loop class="background-video">
+                <source src="path-to-your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h2>Connecting Hearts Through Art and Technology</h2>
+                <p>Experience the unity that comes from our unique feelings woven together.</p>
+            </div>
+        </section>
         
-        <section class="about">
+        <!-- Bridge Design Section -->
+        <section class="bridge-section">
+            <div class="bridge-container">
+                <div class="bridge">
+                    <!-- Decorative Elements (Optional) -->
+                    <div class="lamp post"></div>
+                    <div class="lamp post"></div>
+                    <div class="lamp post"></div>
+                    <div class="lamp post"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
             <h2>About Bridges of Connection</h2>
             <p>My purpose as an artist is to bring people together by transforming unique human feelings into shared experiences through the fusion of art and technology. By creating interactive installations and digital art, I aim to bridge internal worlds, fostering empathy, understanding, and unity among individuals.</p>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <h2>My Work</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Synth to Heart</h3>
+                    <p>An interactive installation that visualizes human emotions through sound and light.</p>
+                </div>
+                <div class="project">
+                    <h3>EmoBridge</h3>
+                    <p>A digital bridge that responds to collective emotional inputs, creating a dynamic visual display.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What People Say</h2>
+            <div class="testimonial">
+                <p>"Diego's installations truly bridge the gap between technology and human emotion."</p>
+                <h4>- Alex Johnson</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Engaging with Diego's art made me feel more connected and understood."</p>
+                <h4>- Maria Gonzalez</h4>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <form action="https://formspree.io/f/mwkawyde" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
     
     <footer>
-        <p>&copy; 2024 Diego Crisafulli</p>
+        <p>&copy; 2024 Diego Crisafulli. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/diegocrisafu" target="_blank" aria-label="GitHub"><img src="icons/github.svg" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/diegocrisafu" target="_blank" aria-label="LinkedIn"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="mailto:diegoc55@example.com" aria-label="Email"><img src="icons/email.svg" alt="Email"></a>
+        </div>
     </footer>
 </body>
 </html>
