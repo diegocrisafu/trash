@@ -72,6 +72,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 #bridge-svg {
@@ -220,11 +221,6 @@ footer .social-links a {
     margin: 0 10px;
     color: #333;
     text-decoration: none;
-}
-
-footer .social-links img {
-    width: 24px;
-    height: 24px;
 }
 
 /* Scroll Animations */
