@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #e0f7fa, #ffffff);
+    background: linear-gradient(to top, #e0f7fa, #ffffff); /* Soft blue gradient */
     color: #333;
     display: flex;
     flex-direction: column;
@@ -16,11 +16,11 @@ body {
 }
 
 header {
-    background-color: #607d8b;
+    background-color: #607d8b; /* Blue Grey color */
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -29,6 +29,7 @@ header {
 header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -46,15 +47,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #4caf50;
+    color: #4caf50; /* Green color on hover */
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
     height: 60vh;
+    overflow: hidden;
     margin-bottom: 40px;
-    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7);
+    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7); /* Blue gradient */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +67,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
     border-radius: 10px;
     max-width: 800px;
 }
@@ -73,11 +76,13 @@ nav ul li a:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero-content p {
     font-size: 1.5em;
     line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 /* Bridge Design Section */
@@ -95,9 +100,9 @@ nav ul li a:hover {
     height: 400px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to top, #cfd8dc, #eceff1);
+    background: linear-gradient(to top, #cfd8dc, #eceff1); /* Light Grey gradient */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .bridge {
@@ -113,21 +118,27 @@ nav ul li a:hover {
     position: relative;
 }
 
+/* Bridge Towers */
 .bridge-tower {
-    width: 50px;
+    width: 40px;
     height: 300px;
-    background-color: #37474f;
+    background-color: #455a64;
     position: absolute;
     bottom: 100px;
     z-index: 2;
 }
 
 .bridge-tower.left {
-    left: 25%;
+    left: 20%;
+}
+
+.bridge-tower.center {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bridge-tower.right {
-    right: 25%;
+    right: 20%;
 }
 
 /* Bridge Deck */
@@ -137,8 +148,9 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 20px;
-    background-color: #4caf50;
+    background-color: #4caf50; /* Green color */
     z-index: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 /* Bridge Cables */
@@ -157,64 +169,34 @@ nav ul li a:hover {
     transform-origin: bottom;
 }
 
-.left .cable1 {
+.left .cable1, .right .cable1 {
     height: 250px;
     transform: rotate(-75deg);
 }
 
-.left .cable2 {
+.left .cable2, .right .cable2 {
     height: 240px;
     transform: rotate(-65deg);
 }
 
-.left .cable3 {
+.left .cable3, .right .cable3 {
     height: 230px;
     transform: rotate(-55deg);
 }
 
-.left .cable4 {
+.left .cable4, .right .cable4 {
     height: 220px;
     transform: rotate(-45deg);
 }
 
-.left .cable5 {
+.left .cable5, .right .cable5 {
     height: 210px;
     transform: rotate(-35deg);
 }
 
-.left .cable6 {
+.left .cable6, .right .cable6 {
     height: 200px;
     transform: rotate(-25deg);
-}
-
-.right .cable1 {
-    height: 250px;
-    transform: rotate(75deg);
-}
-
-.right .cable2 {
-    height: 240px;
-    transform: rotate(65deg);
-}
-
-.right .cable3 {
-    height: 230px;
-    transform: rotate(55deg);
-}
-
-.right .cable4 {
-    height: 220px;
-    transform: rotate(45deg);
-}
-
-.right .cable5 {
-    height: 210px;
-    transform: rotate(35deg);
-}
-
-.right .cable6 {
-    height: 200px;
-    transform: rotate(25deg);
 }
 
 /* Bridge Road */
@@ -224,19 +206,37 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 20px;
-    background-color: #3e2723;
+    background-color: #3e2723; /* Dark Brown for the road */
     z-index: 2;
 }
 
-/* Additional Styles (e.g., About, Portfolio, Testimonials) */
-.about, .portfolio, .testimonials, .contact {
-    max-width: 800px;
-    text-align: center;
-    padding: 40px 20px;
-    margin: 40px auto;
+/* Bridge Support Columns */
+.bridge-support {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #37474f;
+    bottom: 40px;
+    z-index: 1;
 }
 
-.projects {
-    display: flex;
-    justify-content: space-around;
+.bridge-support.left {
+    left: 20%;
+}
+
+.bridge-support.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bridge-support.right {
+    right: 20%;
+}
+
+/* Footer */
+footer {
+    background-color: #607d8b;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
