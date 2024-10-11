@@ -96,8 +96,8 @@ nav ul li a:hover {
 
 .bridge-container {
     width: 100%;
-    max-width: 1000px;
-    height: 400px; /* Increased height for more detail */
+    max-width: 1200px;
+    height: 400px; /* Adjusted height for better visibility */
     position: relative;
     overflow: hidden;
     background: linear-gradient(to top, #cfd8dc, #eceff1); /* Light Grey gradient */
@@ -113,104 +113,33 @@ nav ul li a:hover {
 
 .bridge {
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    height: 200px; /* Adjusted height */
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 }
 
 /* Bridge Towers */
 .bridge-tower {
-    width: 40px;
-    height: 200px;
+    width: 60px;
+    height: 300px; /* Increased height */
     background-color: #455a64; /* Dark Grey color */
-    position: relative;
-    z-index: 2;
-}
-
-.bridge-tower::before,
-.bridge-tower::after {
-    content: '';
-    width: 12px;
-    height: 120px;
-    background-color: #455a64;
     position: absolute;
     bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Cables */
-.bridge-cable {
-    position: absolute;
-    width: 2px;
-    background-color: #90a4ae; /* Light Blue Grey color */
-    bottom: 100px;
-    transform-origin: bottom;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+.bridge-tower.left {
+    left: 35%;
 }
 
-.bridge-cable.left {
-    left: 20%;
-}
-
-.bridge-cable.right {
-    right: 20%;
-}
-
-/* Bridge Cables Angles */
-.bridge-cable.left.cable1 {
-    height: 150px;
-    transform: rotate(-70deg);
-}
-
-.bridge-cable.left.cable2 {
-    height: 140px;
-    transform: rotate(-60deg);
-}
-
-.bridge-cable.left.cable3 {
-    height: 130px;
-    transform: rotate(-50deg);
-}
-
-.bridge-cable.left.cable4 {
-    height: 120px;
-    transform: rotate(-40deg);
-}
-
-.bridge-cable.left.cable5 {
-    height: 110px;
-    transform: rotate(-30deg);
-}
-
-.bridge-cable.right.cable1 {
-    height: 150px;
-    transform: rotate(70deg);
-}
-
-.bridge-cable.right.cable2 {
-    height: 140px;
-    transform: rotate(60deg);
-}
-
-.bridge-cable.right.cable3 {
-    height: 130px;
-    transform: rotate(50deg);
-}
-
-.bridge-cable.right.cable4 {
-    height: 120px;
-    transform: rotate(40deg);
-}
-
-.bridge-cable.right.cable5 {
-    height: 110px;
-    transform: rotate(30deg);
+.bridge-tower.right {
+    right: 35%;
 }
 
 /* Bridge Deck */
@@ -219,27 +148,201 @@ nav ul li a:hover {
     bottom: 100px;
     left: 0;
     width: 100%;
-    height: 20px;
-    background-color: #3e2723; /* Dark Brown */
+    height: 40px; /* Increased height for better visibility */
+    background-color: #3e2723; /* Darker color for the deck */
     z-index: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Bridge Cables */
+.bridge-cable {
+    position: absolute;
+    width: 4px; /* Thicker cable */
+    background-color: #90a4ae; /* Light Blue Grey color */
+    bottom: 400px; /* Adjusted start point from top of the pillars */
+    transform-origin: bottom;
+    z-index: 2;
+}
+
+.bridge-cable.left {
+    left: 35%;
+}
+
+.bridge-cable.right {
+    right: 35%;
+}
+
+/* Left Cables */
+.bridge-cable.left.cable1 {
+    height: 250px;
+    transform: rotate(-75deg);
+}
+
+.bridge-cable.left.cable2 {
+    height: 240px;
+    transform: rotate(-65deg);
+}
+
+.bridge-cable.left.cable3 {
+    height: 230px;
+    transform: rotate(-55deg);
+}
+
+.bridge-cable.left.cable4 {
+    height: 220px;
+    transform: rotate(-45deg);
+}
+
+.bridge-cable.left.cable5 {
+    height: 210px;
+    transform: rotate(-35deg);
+}
+
+/* Right Cables */
+.bridge-cable.right.cable1 {
+    height: 250px;
+    transform: rotate(75deg);
+}
+
+.bridge-cable.right.cable2 {
+    height: 240px;
+    transform: rotate(65deg);
+}
+
+.bridge-cable.right.cable3 {
+    height: 230px;
+    transform: rotate(55deg);
+}
+
+.bridge-cable.right.cable4 {
+    height: 220px;
+    transform: rotate(45deg);
+}
+
+.bridge-cable.right.cable5 {
+    height: 210px;
+    transform: rotate(35deg);
 }
 
 /* Bridge Road */
 .bridge-road {
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 0;
     width: 100%;
     height: 20px;
-    background-color: #607d8b; /* Road color */
+    background-color: #3e2723; /* Dark Brown for the road */
+    z-index: 2;
 }
 
+/* Bridge Road Lines */
 .bridge-road-line {
     position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #ffffff;
-    top: 50%;
+    bottom: 110px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 20px;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.bridge-road-line::before,
+.bridge-road-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.bridge-road-line::before {
+    left: -20px;
+}
+
+.bridge-road-line::after {
+    left: 20px;
+}
+
+/* Additional bridge supports */
+.bridge-support {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: #37474f;
+    bottom: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.bridge-support.left {
+    left: 20%;
+}
+
+.bridge-support.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bridge-support.right {
+    right: 20%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bridge-container {
+        height: 300px;
+    }
+
+    .bridge-tower {
+        height: 200px;
+    }
+
+    .bridge-cable {
+        display: none; /* Hide cables on small screens for simplicity */
+    }
+
+    .about,
+    .portfolio,
+    .testimonials,
+    .contact {
+        padding: 30px 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .portfolio .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .bridge-container {
+        height: 200px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-links a img {
+        width: 20px;
+        height: 20px;
+    }
 }
