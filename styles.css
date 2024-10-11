@@ -80,6 +80,12 @@ nav ul li a:hover {
     height: auto;
 }
 
+/* Optional: Smooth Car Animation */
+#car {
+    transition: transform 0.1s linear;
+}
+
+
 /* About Section */
 .about {
     padding: 60px 20px;
@@ -221,6 +227,11 @@ footer .social-links a {
     margin: 0 10px;
     color: #333;
     text-decoration: none;
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
 }
 
 /* Scroll Animations */
