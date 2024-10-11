@@ -97,7 +97,7 @@ nav ul li a:hover {
 .bridge-container {
     width: 100%;
     max-width: 1000px;
-    height: 400px; /* Increased height for more detail */
+    height: 500px; /* Increased height for more detail */
     position: relative;
     overflow: hidden;
     background: linear-gradient(to top, #cfd8dc, #eceff1); /* Light Grey gradient */
