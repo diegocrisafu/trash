@@ -7,28 +7,25 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #e0f7fa, #ffffff);
+    background: linear-gradient(to top, #e0f7fa, #ffffff); /* Soft blue gradient */
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #607d8b;
+    background-color: #607d8b; /* Blue Grey color */
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -42,19 +39,19 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #4caf50;
+    color: #4caf50; /* Green color on hover */
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
     height: 60vh;
     margin-bottom: 40px;
-    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7);
+    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7); /* Blue gradient */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,9 +92,9 @@ nav ul li a:hover {
     height: 400px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to top, #cfd8dc, #eceff1);
+    background: linear-gradient(to top, #cfd8dc, #eceff1); /* Light Grey gradient */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .bridge {
@@ -115,20 +112,19 @@ nav ul li a:hover {
 
 /* Bridge Towers */
 .bridge-tower {
-    width: 50px;
-    height: 300px;
-    background-color: #37474f;
+    width: 40px;
+    height: 200px;
+    background-color: #455a64;
     position: absolute;
     bottom: 100px;
-    z-index: 2;
 }
 
 .bridge-tower.left {
-    left: 25%;
+    left: 20%;
 }
 
 .bridge-tower.right {
-    left: 75%;
+    left: 80%;
 }
 
 /* Bridge Deck */
@@ -150,177 +146,48 @@ nav ul li a:hover {
     width: 100%;
     height: 20px;
     background-color: #3e2723;
-    z-index: 2;
 }
 
 /* Bridge Cables */
 .bridge-cables {
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: 200px;
     bottom: 100px;
     left: 0;
-    z-index: 1;
 }
 
-.bridge-cables.left .bridge-cable,
-.bridge-cables.right .bridge-cable {
+.cable-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bridge-cable {
     position: absolute;
     width: 2px;
     background-color: #90a4ae;
     transform-origin: top;
-    bottom: 0;
 }
 
-.bridge-cables.left .bridge-cable {
-    left: 25%;
+/* Support Columns */
+.bridge-support {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: #37474f;
+    bottom: 60px;
 }
 
-.bridge-cables.right .bridge-cable {
-    left: 75%;
+.bridge-support.left {
+    left: 20%;
 }
 
-/* Left Side Cables */
-.bridge-cables.left .cable1 {
-    height: 250px;
-    transform: rotate(-70deg);
+.bridge-support.center {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.bridge-cables.left .cable2 {
-    height: 250px;
-    transform: rotate(-60deg);
-}
-
-.bridge-cables.left .cable3 {
-    height: 250px;
-    transform: rotate(-50deg);
-}
-
-.bridge-cables.left .cable4 {
-    height: 250px;
-    transform: rotate(-40deg);
-}
-
-.bridge-cables.left .cable5 {
-    height: 250px;
-    transform: rotate(-30deg);
-}
-
-.bridge-cables.left .cable6 {
-    height: 250px;
-    transform: rotate(-20deg);
-}
-
-/* Right Side Cables */
-.bridge-cables.right .cable1 {
-    height: 250px;
-    transform: rotate(70deg);
-}
-
-.bridge-cables.right .cable2 {
-    height: 250px;
-    transform: rotate(60deg);
-}
-
-.bridge-cables.right .cable3 {
-    height: 250px;
-    transform: rotate(50deg);
-}
-
-.bridge-cables.right .cable4 {
-    height: 250px;
-    transform: rotate(40deg);
-}
-
-.bridge-cables.right .cable5 {
-    height: 250px;
-    transform: rotate(30deg);
-}
-
-.bridge-cables.right .cable6 {
-    height: 250px;
-    transform: rotate(20deg);
-}
-
-/* Additional Styles (e.g., About, Portfolio, Testimonials) */
-.about, .portfolio, .testimonials, .contact {
-    max-width: 800px;
-    text-align: center;
-    padding: 40px 20px;
-    margin: 40px auto;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project {
-    width: 300px;
-    padding: 20px;
-    background-color: #eceff1;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.testimonial {
-    margin-bottom: 20px;
-}
-
-.testimonial h4 {
-    margin-top: 10px;
-    font-weight: normal;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.contact form input, .contact form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact form button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact form button:hover {
-    background-color: #388e3c;
-}
-
-footer {
-    background-color: #607d8b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer .social-links {
-    margin-top: 10px;
-}
-
-footer .social-links a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-
-footer .social-links img {
-    width: 24px;
-    height: 24px;
+.bridge-support.right {
+    left: 80%;
 }
