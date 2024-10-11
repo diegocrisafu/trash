@@ -101,16 +101,9 @@ nav ul li a:hover {
 }
 
 .bridge {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 /* Bridge Towers */
@@ -172,15 +165,11 @@ nav ul li a:hover {
     bottom: 0;
 }
 
+/* Left Side Cables */
 .bridge-cables.left .bridge-cable {
     left: 25%;
 }
 
-.bridge-cables.right .bridge-cable {
-    left: 75%;
-}
-
-/* Left Side Cables */
 .bridge-cables.left .cable1 {
     height: 250px;
     transform: rotate(-70deg);
@@ -212,37 +201,41 @@ nav ul li a:hover {
 }
 
 /* Right Side Cables */
+.bridge-cables.right .bridge-cable {
+    left: 75%;
+}
+
 .bridge-cables.right .cable1 {
     height: 250px;
-    transform: rotate(70deg);
+    transform: rotate(-110deg);
 }
 
 .bridge-cables.right .cable2 {
     height: 250px;
-    transform: rotate(60deg);
+    transform: rotate(-120deg);
 }
 
 .bridge-cables.right .cable3 {
     height: 250px;
-    transform: rotate(50deg);
+    transform: rotate(-130deg);
 }
 
 .bridge-cables.right .cable4 {
     height: 250px;
-    transform: rotate(40deg);
+    transform: rotate(-140deg);
 }
 
 .bridge-cables.right .cable5 {
     height: 250px;
-    transform: rotate(30deg);
+    transform: rotate(-150deg);
 }
 
 .bridge-cables.right .cable6 {
     height: 250px;
-    transform: rotate(20deg);
+    transform: rotate(-160deg);
 }
 
-/* Additional Styles (e.g., About, Portfolio, Testimonials) */
+/* Additional Styles */
 .about, .portfolio, .testimonials, .contact {
     max-width: 800px;
     text-align: center;
