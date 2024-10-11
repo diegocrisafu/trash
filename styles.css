@@ -1,85 +1,3 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #e0f7fa, #ffffff);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    scroll-behavior: smooth;
-}
-
-header {
-    background-color: #607d8b;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #4caf50;
-}
-
-.hero {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    color: white;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    max-width: 800px;
-}
-
-.hero-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.5em;
-    line-height: 1.6;
-}
-
 /* Bridge Design Section */
 .bridge-section {
     width: 100%;
@@ -101,16 +19,10 @@ nav ul li a:hover {
 }
 
 .bridge {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     width: 90%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
+    margin: 0 auto;
 }
 
 /* Bridge Towers */
@@ -128,7 +40,7 @@ nav ul li a:hover {
 }
 
 .bridge-tower.right {
-    left: 75%; /* Corrected from 'right: 25%' to 'left: 75%' */
+    left: 75%;
 }
 
 /* Bridge Deck */
@@ -169,158 +81,86 @@ nav ul li a:hover {
     width: 2px;
     background-color: #90a4ae;
     transform-origin: top;
-    bottom: 0;
 }
 
 .bridge-cables.left .bridge-cable {
-    left: 25%; /* Position at left tower */
+    left: 25%; /* Align with left tower */
 }
 
 .bridge-cables.right .bridge-cable {
-    left: 75%; /* Position at right tower */
+    left: 75%; /* Align with right tower */
 }
 
 /* Left Side Cables */
 .bridge-cables.left .cable1 {
     height: 250px;
-    transform: rotate(-70deg);
+    bottom: 0;
+    transform: rotate(-75deg);
 }
 
 .bridge-cables.left .cable2 {
     height: 250px;
-    transform: rotate(-60deg);
+    bottom: 0;
+    transform: rotate(-65deg);
 }
 
 .bridge-cables.left .cable3 {
     height: 250px;
-    transform: rotate(-50deg);
+    bottom: 0;
+    transform: rotate(-55deg);
 }
 
 .bridge-cables.left .cable4 {
     height: 250px;
-    transform: rotate(-40deg);
+    bottom: 0;
+    transform: rotate(-45deg);
 }
 
 .bridge-cables.left .cable5 {
     height: 250px;
-    transform: rotate(-30deg);
+    bottom: 0;
+    transform: rotate(-35deg);
 }
 
 .bridge-cables.left .cable6 {
     height: 250px;
-    transform: rotate(-20deg);
+    bottom: 0;
+    transform: rotate(-25deg);
 }
 
 /* Right Side Cables */
 .bridge-cables.right .cable1 {
     height: 250px;
-    transform: rotate(70deg);
+    bottom: 0;
+    transform: rotate(75deg);
 }
 
 .bridge-cables.right .cable2 {
     height: 250px;
-    transform: rotate(60deg);
+    bottom: 0;
+    transform: rotate(65deg);
 }
 
 .bridge-cables.right .cable3 {
     height: 250px;
-    transform: rotate(50deg);
+    bottom: 0;
+    transform: rotate(55deg);
 }
 
 .bridge-cables.right .cable4 {
     height: 250px;
-    transform: rotate(40deg);
+    bottom: 0;
+    transform: rotate(45deg);
 }
 
 .bridge-cables.right .cable5 {
     height: 250px;
-    transform: rotate(30deg);
+    bottom: 0;
+    transform: rotate(35deg);
 }
 
 .bridge-cables.right .cable6 {
     height: 250px;
-    transform: rotate(20deg);
-}
-
-/* Additional Styles (e.g., About, Portfolio, Testimonials) */
-.about, .portfolio, .testimonials, .contact {
-    max-width: 800px;
-    text-align: center;
-    padding: 40px 20px;
-    margin: 40px auto;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project {
-    width: 300px;
-    padding: 20px;
-    background-color: #eceff1;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.testimonial {
-    margin-bottom: 20px;
-}
-
-.testimonial h4 {
-    margin-top: 10px;
-    font-weight: normal;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.contact form input, .contact form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact form button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact form button:hover {
-    background-color: #388e3c;
-}
-
-footer {
-    background-color: #607d8b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer .social-links {
-    margin-top: 10px;
-}
-
-footer .social-links a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-
-footer .social-links img {
-    width: 24px;
-    height: 24px;
+    bottom: 0;
+    transform: rotate(25deg);
 }
