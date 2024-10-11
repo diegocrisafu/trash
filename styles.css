@@ -1,33 +1,30 @@
-/* Reset some default styles */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #e0f7fa, #ffffff);
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     scroll-behavior: smooth;
 }
 
+/* Header Styles */
 header {
-    background-color: #607d8b;
-    color: white;
+    background-color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    border-bottom: 1px solid #ddd;
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -38,42 +35,24 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #4caf50;
+    color: #555;
 }
 
-.main {
-    flex: 1;
-}
-
+/* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom right, #81d4fa, #4fc3f7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    color: white;
+    background-color: #e0e0e0;
+    padding: 100px 20px;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    max-width: 800px;
 }
 
 .hero-content h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     margin-bottom: 20px;
 }
@@ -83,174 +62,28 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* Bridge Design Section */
+/* Bridge Section */
 .bridge-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+    background-color: #f5f5f5;
+    padding: 40px 0;
 }
 
 .bridge-container {
     width: 100%;
-    max-width: 1000px;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to top, #cfd8dc, #eceff1);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.bridge {
-    position: relative;
+#bridge-svg {
     width: 100%;
-    height: 100%;
-}
-
-/* Bridge Arches */
-.bridge-arch {
-    position: absolute;
-    bottom: 100px;
-    width: 50%;
-    height: 100px;
-    border-bottom: 50px solid transparent;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-top: 50px solid #607d8b;
-    z-index: 1;
-}
-
-.bridge-arch.arch-left {
-    left: 0;
-    transform: skewX(-30deg);
-}
-
-.bridge-arch.arch-right {
-    right: 0;
-    transform: skewX(30deg);
-}
-
-/* Bridge Towers */
-.bridge-tower {
-    width: 50px;
-    height: 200px;
-    background-color: #37474f;
-    position: absolute;
-    bottom: 200px;
-    z-index: 2;
-}
-
-.bridge-tower.left {
-    left: 25%;
-}
-
-.bridge-tower.right {
-    left: 75%;
-}
-
-/* Bridge Deck */
-.bridge-deck {
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background-color: #757575;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-}
-
-/* Bridge Railings */
-.bridge-railing {
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-    height: 10px;
-    background-color: #bdbdbd;
-    z-index: 2;
-}
-
-.left-railing {
-    left: 0;
-}
-
-.right-railing {
-    right: 0;
-}
-
-/* Bridge Cables */
-.bridge-cables {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    bottom: 200px;
-    left: 0;
-    z-index: 1;
-}
-
-.bridge-cables.left .bridge-cable,
-.bridge-cables.right .bridge-cable {
-    position: absolute;
-    width: 2px;
-    background-color: #90a4ae;
-    transform-origin: top;
-}
-
-.bridge-cables.left .bridge-cable {
-    left: 25%;
-}
-
-.bridge-cables.right .bridge-cable {
-    left: 75%;
-}
-
-/* Left Side Cables */
-.bridge-cables.left .cable1 {
-    height: 150px;
-    transform: rotate(-70deg);
-    bottom: 0;
-}
-
-.bridge-cables.left .cable2 {
-    height: 160px;
-    transform: rotate(-50deg);
-    bottom: 0;
-}
-
-.bridge-cables.left .cable3 {
-    height: 170px;
-    transform: rotate(-30deg);
-    bottom: 0;
-}
-
-/* Right Side Cables */
-.bridge-cables.right .cable1 {
-    height: 150px;
-    transform: rotate(-110deg);
-    bottom: 0;
-}
-
-.bridge-cables.right .cable2 {
-    height: 160px;
-    transform: rotate(-130deg);
-    bottom: 0;
-}
-
-.bridge-cables.right .cable3 {
-    height: 170px;
-    transform: rotate(-150deg);
-    bottom: 0;
+    height: auto;
 }
 
 /* About Section */
 .about {
-    max-width: 800px;
-    text-align: center;
     padding: 60px 20px;
-    margin: 40px auto;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
 }
 
 .about h2 {
@@ -261,28 +94,12 @@ nav ul li a:hover {
 .about p {
     font-size: 1.2em;
     line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.about .learn-more {
-    padding: 10px 30px;
-    font-size: 1em;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.about .learn-more:hover {
-    background-color: #388e3c;
 }
 
 /* Portfolio Section */
 .portfolio {
-    max-width: 1000px;
     padding: 60px 20px;
-    margin: 40px auto;
+    background-color: #f5f5f5;
 }
 
 .portfolio h2 {
@@ -301,14 +118,15 @@ nav ul li a:hover {
 .project {
     width: 300px;
     padding: 20px;
-    background-color: #eceff1;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .project h3 {
@@ -323,15 +141,12 @@ nav ul li a:hover {
 
 /* Testimonials Section */
 .testimonials {
-    max-width: 800px;
     padding: 60px 20px;
-    margin: 40px auto;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
 }
 
 .testimonials h2 {
-    text-align: center;
     font-size: 2.5em;
     margin-bottom: 40px;
 }
@@ -344,14 +159,12 @@ nav ul li a:hover {
 .testimonial h4 {
     margin-top: 10px;
     font-weight: normal;
-    text-align: right;
 }
 
 /* Contact Section */
 .contact {
-    max-width: 800px;
     padding: 60px 20px;
-    margin: 40px auto;
+    background-color: #f5f5f5;
 }
 
 .contact h2 {
@@ -378,22 +191,25 @@ nav ul li a:hover {
 
 .contact form button {
     padding: 10px 30px;
-    background-color: #4caf50;
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 .contact form button:hover {
-    background-color: #388e3c;
+    background-color: #555;
 }
 
+/* Footer */
 footer {
-    background-color: #607d8b;
-    color: white;
+    background-color: #fff;
+    color: #333;
     text-align: center;
     padding: 20px;
+    border-top: 1px solid #ddd;
 }
 
 footer .social-links {
@@ -402,11 +218,23 @@ footer .social-links {
 
 footer .social-links a {
     margin: 0 10px;
-    color: white;
+    color: #333;
     text-decoration: none;
 }
 
 footer .social-links img {
     width: 24px;
     height: 24px;
+}
+
+/* Scroll Animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
